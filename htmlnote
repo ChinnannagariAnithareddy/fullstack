@@ -1,0 +1,107 @@
+--> Javascript Revision :- It is known as ECMAScript (Es)
+  -> 
+     var :- global scope only in function its scope is local 
+       eg:
+          var empName="anujj";
+          function abc(){
+             var x=10;//local 
+          }
+     let :- blocked scope , available within a block {} 
+       for(let i=1;i<=5;i++){
+
+       }
+       if(condition){
+         let i=10;
+       }
+       function abc(){
+
+       }
+     const :- to define constant (read only)
+     const API_URL="http://abc.com"
+    -> operators
+        == and ===
+        == :- only check value 
+        === :- check both value and datatype  
+        eg:
+        let a=10;//number 
+        let b="10";//string 
+        if(a==b) // true 
+        if(a===b) // false 
+    -> conditions :- if else , if else if else , switch case 
+    -> loop (Iteration) : for , while , do-while 
+    -> array :- group of element used to store multiple values in a single variable of any type.
+       let arr=[23,45.67,"sumit",true];
+        arr.forEach(val=>{
+            console.log(val);
+        })
+    -> function :- reusability
+       Function return a value and return only 1 value at a time 
+          function abc(){
+            ---
+          }
+          -> Anonmyous 
+          let abc=function(){
+
+          }
+          -> arrow 
+          let add=(a,b)=> (a+b)
+          -> iife 
+          (function(){
+
+          })()
+         -> Callback :- are used to handle asynchronous operations.
+         These are the function which is passed as a argument in another function and execute at the end.
+           function xyz(par,callback)
+           {
+              res=par*par;
+              callback(res)
+           }
+           function myCallback(par){
+              console.log(Math.pow(par,3))
+           }
+           xyz(5,myCallback);
+           when we have the nested callback then it hardly to manage and this problem is known as callback hell or pyramid of doom.
+              asyncFunction(()=>{
+                  asyncFunction(()=>{
+                     asyncFunction(()=>{
+                        asyncFunction(()=>{
+                            ----
+                        })
+                     })
+                  })
+              })
+    -> To solve this problem Javascript introduced in es 6 promises and async/await 
+    -> DOM :- It is an API which is used to manupulate elements at runtime. When our webpage is executed it create a Document object , with the help of it and predefined methods we can add, delete , modify elements at runtime. 
+       document.getElementById("idname")
+       innerHTML : get or set HTML content 
+       textContent :- get or et textContent 
+       getAttribute(attributename)
+       setAttribute(attributename,value)
+       createElement() :- create element at runtime 
+       appendChild() :- to append new created element in the parent element 
+       .style.property=value 
+       .value :- get or set form field values 
+     *** difference between spread oprator and rest parameter (...)
+     -> *** map , filter and reduce 
+     -> Generators :- we can pause a function in a middle and it is start where it is paused.
+       -> it return multiple values 
+         function *generator(){
+         }
+        yield 
+         -> It return generator object (Iterator)
+            let gen=generator()
+             gen.next(); {value:'',done:false}
+
+      -> Create a button , when click on the button a prompt box is coming where you can enter age and in behalf of age find the used is elligible or not ?
+        hint : 
+          age>=18 , then elligible 
+           otherwise not elligible 
+    -> Wap to create a function where we change the backgrougn color of the web page is change in every 3 seconds when we click on the button?
+    -> Create 3 textbox of name , age , email and apply the validations ?
+        name must be in alphanates 
+        age in number 
+        email proper email id 
+          use regex 
+       onkeyup 
+       onkeypress 
+   -> 
